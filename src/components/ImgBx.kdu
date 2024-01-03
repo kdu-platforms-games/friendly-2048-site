@@ -1,0 +1,55 @@
+<script setup>
+defineProps({
+  imgSrc: {
+    url: String,
+    isActive: { type: Boolean, default: false },
+  },
+})
+</script>
+
+<template>
+  <div class="dots">
+    <template k-for="img in imgSrc">
+      <span :class="'dot' + (img.isActive ? ' active' : '')" />
+    </template>
+  </div>
+
+  <div class="imgBx">
+    <template k-for="img in imgSrc">
+      <img :src="img.url" :class="'slides' + (img.isActive ? ' active' : '')" />
+    </template>
+  </div>
+</template>
+
+<style scoped>
+.dots {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 80px;
+  display: flex;
+  flex-direction: column;
+}
+.dots .dot {
+  position: relative;
+  width: 10px;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.25);
+  display: inline-flex;
+  margin: 5px;
+  cursor: pointer;
+}
+.dots .dot.active {
+  background: #fff;
+}
+
+.imgBx img {
+  margin-left: 50px;
+  margin-right: 100px;
+  max-width: 300px;
+  display: none;
+}
+.imgBx img.active {
+  display: block;
+}
+</style>

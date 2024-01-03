@@ -1,0 +1,39 @@
+<script setup>
+import { ref } from 'kdu';
+import Header from './components/Header.kdu'
+import ContentBx from './components/ContentBx.kdu'
+
+const imgSrc = ref([
+  {url: "preview_1.png", isActive: true},
+  {url: "preview_2.png"},
+  {url: "preview_3.png"},
+]);
+</script>
+
+<template>
+  <section class="main">
+    <Header
+      logoSrc="/logo.png"
+      issueRepo="kdu-platforms-game/friendly-2048-site"
+    />
+
+    <ContentBx
+      appName="Friendly 2048"
+      description="The Android application Friendly 2048 is an exciting puzzle game. The game is considered to be won if you reach the number 2048 by sliding the same numbers together."
+      playStoreLink="#"
+      appleStoreLink="#"
+      :imgSrc="imgSrc"
+    />
+  </section>
+</template>
+
+<style scoped>
+.main {
+  position: relative;
+  background: linear-gradient(120deg, #FFF, #FFF 62%, #03a9f4 62%, #03a9f4 100%);
+  min-height: 100vh;
+  padding: 0 100px;
+  display: flex;
+  align-items: center;
+}
+</style>
