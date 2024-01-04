@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "site": "friendly-2048",
+    "public": "dist",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
