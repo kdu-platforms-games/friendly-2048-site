@@ -1,12 +1,20 @@
 <script setup>
 import { ref } from 'kdu';
+
 import Header from './components/Header.kdu'
 import ContentBx from './components/ContentBx.kdu'
+import Sci from './components/Sci.kdu';
 
 const imgSrc = ref([
-  {url: "preview_1.png", isActive: true},
-  {url: "preview_2.png"},
-  {url: "preview_3.png"},
+  { url: "preview_1.png" },
+  { url: "preview_2.png" },
+  { url: "preview_3.png" },
+]);
+
+const urls = ref([
+  { link: "mailto:nkduy.dev@gmail.com", icon: "mail-open" },
+  { link: "https://www.facebook.com/khanhduy1407", icon: "logo-facebook" },
+  { link: "https://github.com/kdu-platforms-games", icon: "logo-github" },
 ]);
 </script>
 
@@ -14,15 +22,19 @@ const imgSrc = ref([
   <section class="main">
     <Header
       logoSrc="/logo.png"
-      issueRepo="kdu-platforms-game/friendly-2048-site"
+      issueRepo="kdu-platforms-games/friendly-2048-site"
     />
 
     <ContentBx
       appName="Friendly 2048"
-      description="The Android application Friendly 2048 is an exciting puzzle game. The game is considered to be won if you reach the number 2048 by sliding the same numbers together."
+      description="The application Friendly 2048 is an exciting puzzle game. The game is considered to be won if you reach the number 2048 by sliding the same numbers together."
       playStoreLink="#"
-      appleStoreLink="#"
+      appleStoreLink=""
       :imgSrc="imgSrc"
+    />
+
+    <Sci
+      :urls="urls"
     />
   </section>
 </template>
@@ -35,5 +47,12 @@ const imgSrc = ref([
   padding: 0 100px;
   display: flex;
   align-items: center;
+}
+
+@media screen and (max-width: 991px) {
+  .main {
+    padding: 30px;
+    background: #fff;
+  }
 }
 </style>

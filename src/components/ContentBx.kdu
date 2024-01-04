@@ -7,8 +7,8 @@ defineProps({
   playStoreLink: String,
   appleStoreLink: String,
   imgSrc: {
-    url: String,
-    isActive: { type: Boolean, default: false },
+    type: Array,
+    required: true,
   },
 })
 </script>
@@ -71,5 +71,18 @@ defineProps({
 .btn fml-icon {
   margin-right: 10px;
   font-size: 1.4em;
+}
+
+@media screen and (max-width: 991px) {
+  .contentBx {
+    flex-direction: column-reverse;
+    margin: 100px 0;
+  }
+  .contentBx .text {
+    text-align: center;
+  }
+  .contentBx .text h2 {
+    font-size: 3em;
+  }
 }
 </style>
