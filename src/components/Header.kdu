@@ -15,7 +15,7 @@ defineProps({
 
     <ul>
       <li><RouterLink to="/">Home</RouterLink></li>
-      <li><RouterLink to="/play">Play Game</RouterLink></li>
+      <li><RouterLink to="/play">Play</RouterLink></li>
       <li><a href="/privacy.html">Privacy</a></li>
       <li><a :href="'https://github.com/' + issueRepo + '/issues/new'" target="_blank">Issues</a></li>
     </ul>
