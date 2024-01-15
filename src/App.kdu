@@ -1,22 +1,6 @@
 <script setup>
-import { ref } from 'kdu';
-
 import Header from './components/Header.kdu'
-import ContentBx from './components/ContentBx.kdu'
-import Sci from './components/Sci.kdu';
-
-const imgSrc = ref([
-  { url: "preview_1.png" },
-  { url: "preview_2.png" },
-  { url: "preview_3.png" },
-  { url: "preview_4.png" },
-]);
-
-const urls = ref([
-  { link: "mailto:nkduy.dev@gmail.com", icon: "mail-open" },
-  { link: "https://www.facebook.com/khanhduy1407", icon: "logo-facebook" },
-  { link: "https://github.com/kdu-platforms-games", icon: "logo-github" },
-]);
+import { RouterView } from 'kdu-router';
 </script>
 
 <template>
@@ -26,17 +10,7 @@ const urls = ref([
       issueRepo="kdu-platforms-games/friendly-2048-site"
     />
 
-    <ContentBx
-      appName="Friendly 2048"
-      description="The application Friendly 2048 is an exciting puzzle game. The game is considered to be won if you reach the number 2048 by sliding the same numbers together."
-      playStoreLink="#"
-      appleStoreLink=""
-      :imgSrc="imgSrc"
-    />
-
-    <Sci
-      :urls="urls"
-    />
+    <RouterView />
   </section>
 </template>
 

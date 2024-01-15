@@ -1,4 +1,6 @@
 <script setup>
+import { RouterLink } from 'kdu-router';
+
 defineProps({
   logoSrc: String,
   issueRepo: String,
@@ -12,7 +14,8 @@ defineProps({
     </a>
 
     <ul>
-      <li><a href="#" class="active">Home</a></li>
+      <li><RouterLink to="/">Home</RouterLink></li>
+      <li><RouterLink to="/play">Play Game</RouterLink></li>
       <li><a href="/privacy.html">Privacy</a></li>
       <li><a :href="'https://github.com/' + issueRepo + '/issues/new'" target="_blank">Issues</a></li>
     </ul>
@@ -50,7 +53,7 @@ header ul li a {
   font-weight: 500;
 }
 header ul li a:hover,
-header ul li a.active {
+header ul li a.router-link-active.router-link-exact-active {
   color: #03a9f4;
 }
 
