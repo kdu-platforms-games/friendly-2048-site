@@ -1,9 +1,11 @@
-[{
-  "relation": ["delegate_permission/common.handle_all_urls"],
-  "target": {
-    "namespace": "android_app",
-    "package_name": "org.kdu.game.friendly2048",
-    "sha256_cert_fingerprints":
-    ["56:7B:19:38:36:97:D4:62:1C:C0:D4:12:3D:2B:C1:B6:38:D8:CD:EC:E2:9D:DA:E6:61:91:79:D8:69:CB:51:64"]
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "org.kdu.game.friendly2048",
+      "sha256_cert_fingerprints":
+        ["A3:E7:83:52:39:CE:B0:D8:22:04:8A:8B:8D:70:37:6E:23:49:D6:4C:E6:79:A5:D6:7A:A3:D6:EA:3D:67:92:76"]
+    }
   }
-}]
+]
