@@ -9,6 +9,7 @@ const imgSrc = ref([
   { url: "preview_2.png" },
   { url: "preview_3.png" },
   { url: "preview_4.png" },
+  { url: "preview_5.png" },
 ]);
 
 const urls = ref([
