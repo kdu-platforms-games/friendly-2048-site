@@ -4,6 +4,7 @@ import ImgBx from './ImgBx.kdu'
 defineProps({
   appName: String,
   description: String,
+  amazonAppstoreLink: String,
   playStoreLink: String,
   appleStoreLink: String,
   imgSrc: {
@@ -19,6 +20,7 @@ defineProps({
       <h2>{{ appName }}</h2>
       <p>{{ description }}</p>
       <h4>Download the app</h4>
+      <a k-if="amazonAppstoreLink" :href="amazonAppstoreLink" class="btn"><fml-icon name="logo-amazon" /> Amazon Appstore</a>
       <a k-if="playStoreLink" :href="playStoreLink" class="btn"><fml-icon name="logo-google-playstore" /> Play Store</a>
       <a k-if="appleStoreLink" :href="appleStoreLink" class="btn"><fml-icon name="logo-apple" /> Apple Store</a>
     </div>
