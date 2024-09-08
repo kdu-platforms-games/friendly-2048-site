@@ -23,6 +23,7 @@ const urls = ref([
   <ContentBx
     appName="Friendly 2048"
     description="The application Friendly 2048 is an exciting puzzle game. The game is considered to be won if you reach the number 2048 by sliding the same numbers together."
+    amazonAppstoreLink="https://www.amazon.com/dp/B0DGDBJ8S4"
     playStoreLink="https://play.google.com/store/apps/details?id=org.kdu.game.friendly2048"
     appleStoreLink=""
     :imgSrc="imgSrc"
