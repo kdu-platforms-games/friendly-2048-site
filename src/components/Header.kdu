@@ -20,7 +20,7 @@ defineProps({
       <li><a :href="'https://github.com/' + issueRepo + '/issues/new'" target="_blank">Issues</a></li>
     </ul>
 
-    <a href="#" class="app"><fml-icon name="download-outline" />Download App</a>
+    <a href="https://github.com/kdu-platforms-games/archive/raw/refs/heads/main/Friendly-2048/Friendly-2048-24-v3.0.3-release.apk" class="app"><fml-icon name="download-outline" />Download App</a>
   </header>
 </template>
 

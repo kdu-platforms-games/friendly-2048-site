@@ -7,6 +7,7 @@ defineProps({
   amazonAppstoreLink: String,
   playStoreLink: String,
   appleStoreLink: String,
+  androidLink: String,
   imgSrc: {
     type: Array,
     required: true,
@@ -23,6 +24,7 @@ defineProps({
       <a k-if="amazonAppstoreLink" :href="amazonAppstoreLink" class="btn"><fml-icon name="logo-amazon" /> Amazon Appstore</a>
       <a k-if="playStoreLink" :href="playStoreLink" class="btn"><fml-icon name="logo-google-playstore" /> Play Store</a>
       <a k-if="appleStoreLink" :href="appleStoreLink" class="btn"><fml-icon name="logo-apple" /> Apple Store</a>
+      <a k-if="androidLink" :href="androidLink" class="btn"><fml-icon name="logo-android" /> Android APK</a>
     </div>
 
     <ImgBx
